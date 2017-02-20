@@ -20,13 +20,13 @@ public class CounterController {
 
     private CounterService counterService;
 
-    // in CDI, constructor injection is optional feature and
-    // resteasy doesn't implement it
+    // Resteasy requires also an empty constructor for constructor injection to work
     // https://issues.jboss.org/browse/RESTEASY-1538
+    public CounterController() {}
+
     @Inject
-    public CounterController setCounterService(CounterService counterService) {
+    public CounterController(CounterService counterService) {
         this.counterService = counterService;
-        return this;
     }
 
     @POST
