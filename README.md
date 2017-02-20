@@ -1,5 +1,5 @@
 Simple Wildfly Swarm app
-======================
+========================
 
 [![Build Status](https://api.travis-ci.org/eis/wildfly-swarm-example.svg?branch=master)]
 (https://travis-ci.org/eis/wildfly-swarm-example)
@@ -8,5 +8,5 @@ Simple Wildfly Swarm app
 
 Inspired by my other example app, https://github.com/eis/spring-boot-example.
 
-Answers to [http://localhost:8080/](http://localhost:8080/) (GET).
+Answers to http://localhost:8080/ (GET) and http://localhost:8080/add (POST, async).
 
