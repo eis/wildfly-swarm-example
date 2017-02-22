@@ -1,6 +1,7 @@
 package example.counter;
 
-import javax.enterprise.context.ApplicationScoped;
+import io.swagger.annotations.ApiOperation;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import javax.validation.Valid;
@@ -12,9 +13,6 @@ import javax.ws.rs.container.AsyncResponse;
 import javax.ws.rs.container.Suspended;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
-
-
-import io.swagger.annotations.ApiOperation;
 
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)

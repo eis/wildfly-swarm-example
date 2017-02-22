@@ -79,21 +79,19 @@
             <artifactId>cdi</artifactId>
         </dependency>
         <dependency>
-            <groupId>javax.ws.rs</groupId>
-            <artifactId>javax.ws.rs-api</artifactId>
-            <version>2.0</version>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>logging</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
             <version>1.1.0.Final</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>javax.enterprise</groupId>
-            <artifactId>cdi-api</artifactId>
-            <version>1.2</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -106,18 +104,6 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-        </dependency>
-
-        <!-- Swagger for api documentation -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>2.4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.4.0</version>
         </dependency>
 
         <!-- below for robot framework -->
@@ -146,6 +132,19 @@
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
             <version>1.1.1</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- jax-rs testing -->
+        <dependency>
+            <groupId>io.github.binout</groupId>
+            <artifactId>jaxrs-unit-api</artifactId>
+            <version>1.1.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.binout</groupId>
+            <artifactId>jaxrs-unit-resteasy</artifactId>
+            <version>1.1.0</version>
             <scope>test</scope>
         </dependency>
         <!-- wildfly test -->
@@ -181,11 +180,19 @@
             <scope>test</scope>
         </dependency>
         <!-- below for rest-assured -->
+        <!--
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
             <version>3.0.0</version>
             <scope>test</scope>
+        </dependency>
+        -->
+        <!-- regular test deps -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>2.7.10</version>
         </dependency>
 
     </dependencies>
