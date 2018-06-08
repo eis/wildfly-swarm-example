@@ -193,13 +193,6 @@
                   </checkstyleRules>
                 </configuration>
               </plugin>
-            <!-- below for robot acceptance tests -->
-            <plugin>
-                <!-- to run robot acceptance tests: mvn robotframework:run -->
-                <groupId>org.robotframework</groupId>
-                <artifactId>robotframework-maven-plugin</artifactId>
-                <version>1.4.7</version>
-            </plugin>
             <plugin>
                 <!-- to report local results to coveralls, use -DrepoToken=yourrepotoken -->
                 <!-- Travis should work automatically -->
