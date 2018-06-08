@@ -1,7 +1,6 @@
 package io.github.binout.jaxrsunit.resteasy;
 
 import io.github.binout.jaxrsunit.JaxrsResponse;
-import io.github.binout.jaxrsunit.resteasy.RestEasyResponse;
 import lombok.SneakyThrows;
 import org.jboss.resteasy.mock.MockHttpResponse;
 
