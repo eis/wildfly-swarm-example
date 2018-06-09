@@ -147,6 +147,11 @@
                     <execution>
                         <id>stop</id>
                     </execution>
+                    <execution>
+                      <goals>
+                        <goal>package</goal>
+                      </goals>
+                    </execution>
                 </executions>
             </plugin>
 
