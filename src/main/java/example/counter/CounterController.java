@@ -20,7 +20,7 @@ import javax.ws.rs.core.MediaType;
 @Singleton
 public class CounterController {
 
-    private CounterService counterService;
+    private final CounterService counterService;
 
     // Resteasy/CDI requires @Context+@Singleton for constructor injection to work
     // https://issues.jboss.org/browse/RESTEASY-1538
