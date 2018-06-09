@@ -29,6 +29,8 @@
         <wildfly.version>2018.3.0</wildfly.version>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
 
     <dependencyManagement>
@@ -84,7 +86,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.10</version>
+            <version>1.16.22</version>
         </dependency>
 
         <dependency>
@@ -127,11 +129,26 @@
         <plugins>
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.5</version>
+                <version>3.2.1</version>
                 <configuration>
                     <!-- Java EE 7 doesn't require web.xml, Maven needs to catch up! -->
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.6</version>
+                <!--  this is for fixing maven for java 9/10, see
+                      https://stackoverflow.com/questions/36583118/is-maven-ready-for-jdk9/36605759#36605759
+                      -->
+                <dependencies>
+                    <dependency>
+                        <groupId>org.codehaus.plexus</groupId>
+                        <artifactId>plexus-archiver</artifactId>
+                        <version>2.4.4</version>
+                    </dependency>
+                </dependencies>
             </plugin>
             <plugin>
                 <groupId>org.wildfly.swarm</groupId>
