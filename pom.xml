@@ -183,8 +183,8 @@
                     <rules>
                       <requireJavaVersion>
                         <message>
-ERROR: This codebase requires java 8 version later than 132 (https://stackoverflow.com/a/37528479/365237).
-ERROR: Currently several plugins/dependencies fail on later java versions.</message>
+ERROR: This codebase requires java 8 version later than 132 (https://stackoverflow.com/a/37528479/365237), and
+ERROR: several plugins/dependencies fail on java 9 and later, so java version must be in between.</message>
                         <version>(1.8.0_132,1.9.0)</version>
                       </requireJavaVersion>
                     </rules>
