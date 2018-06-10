@@ -183,9 +183,11 @@
                     <rules>
                       <requireJavaVersion>
                         <message>
-ERROR: This codebase requires java 8 version later than 132 (https://stackoverflow.com/a/37528479/365237), and
+ERROR: This codebase requires java 8 later than 1.8.0-b132 (https://stackoverflow.com/a/37528479/365237), and
 ERROR: several plugins/dependencies fail on java 9 and later, so java version must be in between.</message>
-                        <version>(1.8.0_132,1.9.0)</version>
+                        <!-- 1.8.0-b132 is normalized to 1.8.0, so we match against that string -->
+                        <!-- for example 1.8.0_112 normalized as: 1.8.0-112, which passes -->
+                        <version>(1.8.0,1.9.0)</version>
                       </requireJavaVersion>
                     </rules>
                   </configuration>
