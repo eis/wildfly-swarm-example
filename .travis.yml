@@ -1,8 +1,9 @@
 language: java
 sudo: false
+dist: xenial
 
 jdk:
-  - oraclejdk8
+  - openjdk8
 
 script: travis_wait mvn verify --quiet --batch-mode
 
